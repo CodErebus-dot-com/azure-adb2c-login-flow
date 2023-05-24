@@ -22,7 +22,7 @@ export const render = (el: HTMLElement, config: IAppConfig = {}) => {
         errorElement: <ErrorPage />,
         children: [
           {
-            path: "signinsignup",
+            path: "/signinsignup",
             element: <SignInPage />,
           },
         ]

@@ -3,7 +3,7 @@ import Logo from "../public/Genesis_logo.svg";
 import { SignInButton } from "./components/atoms/SignInButton";
 import { useIsAuthenticated, useInstance } from "./hooks";
 import { SignOutButton } from "./components/atoms/SignOutButton";
-import { Outlet } from 'react-router-dom';
+import { Outlet, Link, Route, Routes } from 'react-router-dom';
 import { setIdToken } from "./authService";
 
 const StyledApp = styled.div`
@@ -148,6 +148,7 @@ export function App() {
         <Logo width="75" height="75" />
         <h1>Welcome !</h1>
         { isAuthenticated ? <SignOutButton /> : <SignInButton /> }
+        <Link to={`signinsignup`}>Test Link</Link>
       </header>
       <main>
         <h2>Resources &amp; Tools</h2>
